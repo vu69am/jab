@@ -1,0 +1,16 @@
+#2025-03-25
+apt upgrade
+apt install -y elixir clang libyaml autoconf automake imagemagick libgd
+
+git clone https://github.com/vu69am/jab
+
+cd jab
+./autogen.sh
+./configure --with-rebar=mix
+
+export MIX_OS_CONCURRENCY_LOCK=0 && make
+
+make dev
+
+echo "_build/dev/rel/ejabberd/bin/ejabberdctl live" > 00run
+chmod +x 00run

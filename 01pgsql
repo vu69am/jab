@@ -1,0 +1,11 @@
+#create
+mkdir -p $PREFIX/var/lib/postgresql
+initdb $PREFIX/var/lib/postgresql
+
+#run
+pg_ctl -D $PREFIX/var/lib/postgresql start
+
+#create user
+createuser --superuser --pwprompt ejabberd
+#create db
+createdb ejabberd
