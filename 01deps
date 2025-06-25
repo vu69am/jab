@@ -1,0 +1,3 @@
+apt-get install libexpat1-dev libgd-dev libpam0g-dev \
+                libsqlite3-dev libwebp-dev libyaml-dev \
+                autoconf automake erlang elixir rebar3
